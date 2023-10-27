@@ -159,11 +159,20 @@ $animals = [
 
 
 foreach ($animals as $animalClass) {
- foreach($animalClass as $animal) {
-		 echo "<br>$animal";
- }
+	foreach($animalClass as $animal) {
+		echo "<br>$animal";
+	}
 }
 
+// FUNZIONI -------------
+
+function saluto($name){
+	return "Ciao $name";
+}
+
+function salutoConEcho($name){
+	echo"Ciao $name";
+}
 
 
 
@@ -181,6 +190,9 @@ foreach ($animals as $animalClass) {
 </head>
 <body class="container py-5">
 	<h1>Ciao mio primo PHP</h1>
+	<h2><?php echo saluto('Ugo da funzione') ?></h2>
+	<h2><?php salutoConEcho('Ugo da funzione con echo') ?></h2>
+	<h2> ---> <?php salutoConEcho($user['name']) ?></h2>
 	<h2>Ciao <?php  echo $name;   ?> <?php echo $lastname   ?></h2>
 	<h2>Ciao <?php echo $nome_cognome ?></h2>
 	<h3><?php echo $saluto ?></h3>
